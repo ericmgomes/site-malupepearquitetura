@@ -1,0 +1,121 @@
+/* ══════════════════════════════════
+   RESPONSIVE — Mobile-first
+   Breakpoints: 600px · 900px · 1200px
+══════════════════════════════════ */
+
+/* ── Tablet (600px+) ── */
+@media (min-width: 600px) {
+
+  /* Credenciais */
+  .credential-item__number { font-size: 40px; }
+
+  /* Blog secondary grid */
+  .blog__secondary-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Depoimentos — 2 colunas */
+  .depoimentos__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+
+  /* Portfolio grid mantém 2 col */
+  .portfolio__grid { gap: 16px; }
+
+  /* Form: email + telefone lado a lado */
+  .form-grid-2 { grid-template-columns: 1fr 1fr; }
+
+  /* Process steps — 2 col */
+  .servicos__steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  /* Footer grid */
+  .footer__grid {
+    grid-template-columns: 1.6fr 1fr 1fr;
+  }
+}
+
+/* ── Desktop sm (900px+) ── */
+@media (min-width: 900px) {
+
+  /* Navbar */
+  .navbar__hamburger { display: none; }
+  .navbar__links { display: flex; }
+  .navbar__cta-desktop { display: flex; }
+
+  /* Hero: split 50/50 */
+  .hero__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+  .hero__img-col { order: 2; }
+  .hero__text-col { order: 1; }
+
+  .hero__photo { aspect-ratio: 4/5; max-height: 600px; }
+
+  /* Sobre split */
+  .sobre__layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-xl);
+  }
+  .sobre__img-col { flex: 0 0 320px; }
+  .sobre__text-col { flex: 1; }
+
+  /* Portfolio — 3 colunas */
+  .portfolio__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Depoimentos — 3 colunas */
+  .depoimentos__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* FAQ — 2 colunas (header + lista) */
+  .faq__layout {
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-xl);
+  }
+
+  /* Contato split */
+  .contato__layout {
+    flex-direction: row;
+    gap: var(--space-xl);
+  }
+  .contato__form-col { flex: 1; }
+  .contato__info-col { flex: 0 0 300px; }
+
+  /* Serviços process steps — 2 col no desktop mantém */
+  /* Blog secondary 2 col já aplicado */
+}
+
+/* ── Desktop lg (1200px+) ── */
+@media (min-width: 1200px) {
+
+  .container { padding: 0 40px; }
+
+  #hero         { padding: var(--space-2xl) 0; }
+  #sobre        { padding: var(--space-2xl) 0; }
+  #servicos     { padding: var(--space-2xl) 0; }
+  #portfolio    { padding: var(--space-2xl) 0; }
+  #blog         { padding: var(--space-2xl) 0; }
+  #depoimentos  { padding: var(--space-2xl) 0; }
+  #faq          { padding: var(--space-2xl) 0; }
+  #contato      { padding: var(--space-2xl) 0; }
+
+  .sobre__img-col { flex: 0 0 360px; }
+
+  /* Portfolio destaque ainda maior */
+  .portfolio-item--featured .portfolio-item__img { aspect-ratio: 21/8; }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}

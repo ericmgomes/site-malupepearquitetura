@@ -1,7 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npx serve *)",
+      "Bash(npx --yes serve -l 3000 \"C:\\\\Users\\\\ericg\\\\Documents\\\\PESSOAL\\\\DEV\\\\site-malupepe-arquitetura\")",
+      "Bash(ping -n 4 127.0.0.1)",
+      "Bash(curl -s -o nul -w \"%{http_code}\" http://localhost:3000)",
+      "Read(//c/Users/ericg/Documents/PESSOAL/Malu Pepe Arquitetura/**)",
+      "Bash(ls \"Bárbara e Wagner-20260422T214238Z-3-001.zip\")",
+      "Bash(dir \"Bárbara e Wagner-20260422T214238Z-3-001.zip\")",
+      "Bash(powershell -Command \"Expand-Archive -Path 'C:\\\\Users\\\\ericg\\\\Documents\\\\PESSOAL\\\\Malu Pepe Arquitetura\\\\Bárbara e Wagner-20260422T214238Z-3-001.zip' -DestinationPath 'C:\\\\Users\\\\ericg\\\\Documents\\\\PESSOAL\\\\Malu Pepe Arquitetura\\\\temp_extract' -Force && Get-ChildItem 'C:\\\\Users\\\\ericg\\\\Documents\\\\PESSOAL\\\\Malu Pepe Arquitetura\\\\temp_extract' -Recurse | Select-Object FullName\")",
+      "PowerShell(Copy-Item 'C:\\\\Users\\\\ericg\\\\Documents\\\\PESSOAL\\\\Malu Pepe Arquitetura\\\\logotipos\\\\malu-pepe-arquitetura-logo-365x100.png' 'C:\\\\Users\\\\ericg\\\\Documents\\\\PESSOAL\\\\DEV\\\\site-malupepe-arquitetura\\\\images\\\\logo.png' -Force)"
     ]
   }
 }

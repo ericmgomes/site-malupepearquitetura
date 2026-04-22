@@ -1,6 +1,6 @@
 /* ── lightbox.js ── galeria do Portfólio ── */
 (function () {
-  var lightbox    = document.querySelector('.lightbox');
+  var lightbox  = document.querySelector('.lightbox');
   if (!lightbox) return;
 
   var imgEl    = lightbox.querySelector('.lightbox__img');
@@ -9,34 +9,48 @@
   var prevBtn  = lightbox.querySelector('[data-lb-prev]');
   var nextBtn  = lightbox.querySelector('[data-lb-next]');
 
-  var items   = [];
-  var current = 0;
+  /* Estado */
+  var portfolioItems = [];  /* todos os itens do portfólio */
+  var gallery        = [];  /* fotos do item atual (1 ou N) */
+  var current        = 0;
+  var projectName    = '';
 
-  /* Collect visible portfolio items */
-  function collectItems() {
-    items = Array.from(document.querySelectorAll('[data-lb-src]'))
+  /* ── Coleta itens visíveis do portfólio ── */
+  function collectPortfolio() {
+    portfolioItems = Array.from(document.querySelectorAll('[data-lb-src]'))
       .filter(function (el) {
         return !el.closest('.portfolio__item-wrap.hidden');
       });
   }
 
-  function showItem(index) {
-    if (!items.length) return;
-    current = ((index % items.length) + items.length) % items.length;
-    var item = items[current];
-    var src  = item.dataset.lbSrc  || '';
-    var name = item.dataset.lbName || '';
-
-    if (imgEl) {
-      imgEl.src = src;
-      imgEl.alt = name;
+  /* ── Exibe foto dentro da galeria atual ── */
+  function showPhoto(index) {
+    if (!gallery.length) return;
+    current = ((index % gallery.length) + gallery.length) % gallery.length;
+    if (imgEl)  { imgEl.src = gallery[current]; imgEl.alt = projectName; }
+    if (nameEl) {
+      nameEl.textContent = gallery.length > 1
+        ? projectName + '  ' + (current + 1) + ' / ' + gallery.length
+        : projectName;
     }
-    if (nameEl) nameEl.textContent = name;
+    /* Esconde setas se só há 1 foto */
+    if (prevBtn) prevBtn.style.visibility = gallery.length > 1 ? '' : 'hidden';
+    if (nextBtn) nextBtn.style.visibility = gallery.length > 1 ? '' : 'hidden';
   }
 
-  function openLightbox(index) {
-    collectItems();
-    showItem(index);
+  /* ── Abre lightbox para um item do portfólio ── */
+  function openForItem(trigger) {
+    projectName = trigger.dataset.lbName || '';
+
+    if (trigger.dataset.lbGallery) {
+      /* Galeria de múltiplas fotos */
+      gallery = trigger.dataset.lbGallery.split(',').map(function (s) { return s.trim(); });
+    } else {
+      /* Foto única */
+      gallery = [trigger.dataset.lbSrc];
+    }
+
+    showPhoto(0);
     lightbox.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
@@ -46,29 +60,28 @@
     document.body.style.overflow = '';
   }
 
-  /* Click on portfolio items */
+  /* ── Clique nos itens do portfólio ── */
   document.addEventListener('click', function (e) {
     var trigger = e.target.closest('[data-lb-src]');
     if (!trigger) return;
-    collectItems();
-    var idx = items.indexOf(trigger);
-    openLightbox(idx >= 0 ? idx : 0);
+    collectPortfolio();
+    openForItem(trigger);
   });
 
   if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
-  if (prevBtn)  prevBtn.addEventListener('click', function () { showItem(current - 1); });
-  if (nextBtn)  nextBtn.addEventListener('click', function () { showItem(current + 1); });
+  if (prevBtn)  prevBtn.addEventListener('click', function () { showPhoto(current - 1); });
+  if (nextBtn)  nextBtn.addEventListener('click', function () { showPhoto(current + 1); });
 
-  /* Backdrop click */
+  /* Backdrop */
   lightbox.addEventListener('click', function (e) {
     if (e.target === lightbox) closeLightbox();
   });
 
-  /* Keyboard */
+  /* Teclado */
   document.addEventListener('keydown', function (e) {
     if (!lightbox.classList.contains('open')) return;
     if (e.key === 'Escape')     closeLightbox();
-    if (e.key === 'ArrowLeft')  showItem(current - 1);
-    if (e.key === 'ArrowRight') showItem(current + 1);
+    if (e.key === 'ArrowLeft')  showPhoto(current - 1);
+    if (e.key === 'ArrowRight') showPhoto(current + 1);
   });
 })();

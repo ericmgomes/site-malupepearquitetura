@@ -5,17 +5,28 @@
   var svcTabs   = document.querySelectorAll('[data-svc-tab]');
   var svcPanels = document.querySelectorAll('[data-svc-panel]');
 
-  svcTabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      var target = tab.dataset.svcTab;
+  function activateSvcTab(target) {
+    svcTabs.forEach(function (t) {
+      t.classList.toggle('active', t.dataset.svcTab === target);
+      t.setAttribute('aria-selected', t.dataset.svcTab === target ? 'true' : 'false');
+    });
+    svcPanels.forEach(function (p) {
+      p.classList.toggle('active', p.dataset.svcPanel === target);
+    });
+  }
 
-      svcTabs.forEach(function (t) {
-        t.classList.toggle('active', t.dataset.svcTab === target);
-        t.setAttribute('aria-selected', t.dataset.svcTab === target ? 'true' : 'false');
-      });
-      svcPanels.forEach(function (p) {
-        p.classList.toggle('active', p.dataset.svcPanel === target);
-      });
+  svcTabs.forEach(function (tab) {
+    tab.addEventListener('click',      function () { activateSvcTab(tab.dataset.svcTab); });
+    tab.addEventListener('mouseenter', function () { activateSvcTab(tab.dataset.svcTab); });
+  });
+
+  /* ── Process Steps — bolinha acende no clique ── */
+  var steps = document.querySelectorAll('.process-step');
+
+  steps.forEach(function (step) {
+    step.addEventListener('click', function () {
+      steps.forEach(function (s) { s.classList.add('process-step--muted'); });
+      step.classList.remove('process-step--muted');
     });
   });
 

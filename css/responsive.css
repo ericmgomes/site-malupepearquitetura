@@ -72,10 +72,10 @@
   .sobre__img-col { flex: 0 0 320px; }
   .sobre__text-col { flex: 1; }
 
-  /* Portfolio — mantém 2 colunas */
+  /* Portfolio — 3 colunas */
   .portfolio__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
   }
 
   /* Depoimentos — 3 colunas */

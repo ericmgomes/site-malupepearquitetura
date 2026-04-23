@@ -325,16 +325,22 @@
 ══════════════════════════════════ */
 .portfolio-item {
   position: relative;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   cursor: pointer;
+  background: var(--color-text);
+  box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.portfolio-item:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.14);
+  transform: translateY(-2px);
 }
 .portfolio-item__img-wrap {
   position: relative;
   overflow: hidden;
 }
-.portfolio-item--featured .portfolio-item__img-wrap { aspect-ratio: 16/7; }
-.portfolio-item:not(.portfolio-item--featured) .portfolio-item__img-wrap { aspect-ratio: 4/3; }
+.portfolio-item__img-wrap { aspect-ratio: 1/1; }
 
 .portfolio-item__img {
   position: absolute;
@@ -351,12 +357,46 @@
 .portfolio-item__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(20,12,4,0.72) 0%, transparent 55%);
+  background: none;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 18px;
   opacity: 1;
+}
+
+.portfolio-item__bottom {
+  padding: 14px 18px 18px;
+  width: 100%;
+}
+.portfolio-item__details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(245,243,240,0.12);
+}
+.portfolio-item__details span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+}
+.portfolio-item__details span::before {
+  content: '— ';
+  color: var(--color-accent2);
+}
+
+.portfolio-item__credit {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: rgba(245,243,240,0.35);
+  margin-top: 10px;
 }
 
 .portfolio-item__cat {
@@ -374,6 +414,7 @@
   color: #fff;
   line-height: 1.2;
 }
+.portfolio-item__bottom .portfolio-item__name { color: #fff; }
 
 @media (max-width: 599px) {
   .portfolio-item--featured .portfolio-item__img-wrap { aspect-ratio: 4/3; }

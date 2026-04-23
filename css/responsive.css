@@ -3,6 +3,12 @@
    Breakpoints: 600px · 900px · 1200px
 ══════════════════════════════════ */
 
+/* ── Mobile only (até 899px) ── */
+@media (max-width: 899px) {
+  .navbar__logo-img { height: 38px; }
+  .navbar__cta-desktop { display: none !important; }
+}
+
 /* ── Tablet (600px+) ── */
 @media (min-width: 600px) {
 
@@ -22,7 +28,7 @@
   }
 
   /* Portfolio grid mantém 2 col */
-  .portfolio__grid { gap: 16px; }
+  .portfolio__grid { gap: 28px; }
 
   /* Form: email + telefone lado a lado */
   .form-grid-2 { grid-template-columns: 1fr 1fr; }
@@ -66,9 +72,10 @@
   .sobre__img-col { flex: 0 0 320px; }
   .sobre__text-col { flex: 1; }
 
-  /* Portfolio — 3 colunas */
+  /* Portfolio — mantém 2 colunas */
   .portfolio__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
   }
 
   /* Depoimentos — 3 colunas */

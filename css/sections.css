@@ -273,7 +273,7 @@
 .portfolio__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 28px;
 }
 .portfolio__item-wrap {
   transition: opacity 0.3s ease;

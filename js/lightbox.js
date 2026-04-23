@@ -84,4 +84,43 @@
     if (e.key === 'ArrowLeft')  showPhoto(current - 1);
     if (e.key === 'ArrowRight') showPhoto(current + 1);
   });
+
+  /* Swipe mouse (desktop) */
+  var mouseStartX = 0;
+  var mouseDragging = false;
+  if (imgEl) {
+    imgEl.style.cursor = 'grab';
+    imgEl.addEventListener('mousedown', function (e) {
+      mouseStartX = e.clientX;
+      mouseDragging = true;
+      imgEl.style.cursor = 'grabbing';
+      e.preventDefault();
+    });
+    document.addEventListener('mouseup', function (e) {
+      if (!mouseDragging) return;
+      mouseDragging = false;
+      imgEl.style.cursor = 'grab';
+      var dx = e.clientX - mouseStartX;
+      if (Math.abs(dx) < 40) return;
+      if (dx < 0) showPhoto(current + 1);
+      else        showPhoto(current - 1);
+    });
+  }
+
+  /* Swipe touch */
+  var touchStartX = 0;
+  var touchStartY = 0;
+  lightbox.addEventListener('touchstart', function (e) {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+  lightbox.addEventListener('touchend', function (e) {
+    if (!lightbox.classList.contains('open')) return;
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    var dy = e.changedTouches[0].clientY - touchStartY;
+    /* Só processa se o swipe for majoritariamente horizontal */
+    if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy)) return;
+    if (dx < 0) showPhoto(current + 1);  /* swipe left  → próxima */
+    else        showPhoto(current - 1);  /* swipe right → anterior */
+  }, { passive: true });
 })();

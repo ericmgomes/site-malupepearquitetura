@@ -1,6 +1,6 @@
-/* ── Reset ── */
+﻿/* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 17px; }
 body {
   font-family: var(--font-body);
   background: var(--color-bg);
@@ -55,10 +55,10 @@ h1, h2, h3, h4 {
 }
 
 /* Tamanhos aumentados */
-h1 { font-size: clamp(40px, 7vw, 72px); }
-h2 { font-size: clamp(32px, 5vw, 52px); }
-h3 { font-size: clamp(20px, 2.5vw, 26px); }
-p  { font-size: 17px; line-height: 1.75; color: var(--color-label); }
+h1 { font-size: clamp(41px, 7vw, 73px); }
+h2 { font-size: clamp(33px, 5vw, 53px); }
+h3 { font-size: clamp(21px, 2.5vw, 27px); }
+p  { font-size: 18px; line-height: 1.75; color: var(--color-label); }
 
 /* ── Layout ── */
 .container {
@@ -80,7 +80,7 @@ section[id] { scroll-margin-top: var(--nav-height); }
 .eyebrow {
   display: block;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -89,7 +89,7 @@ section[id] { scroll-margin-top: var(--nav-height); }
 
 .section-header { margin-bottom: var(--space-lg); }
 .section-header h2 { margin-top: 6px; margin-bottom: var(--space-sm); }
-.section-header p { max-width: 660px; font-size: 18px; }
+.section-header p { max-width: 660px; font-size: 19px; }
 
 .text-balance { text-wrap: balance; }
 

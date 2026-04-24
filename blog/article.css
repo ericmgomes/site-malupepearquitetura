@@ -1,0 +1,136 @@
+/* ── Blog Article ── */
+
+/* Navbar */
+.ba-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-stroke);
+  padding: 14px 28px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.ba-nav__brand {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 400;
+  color: var(--color-text);
+}
+.ba-nav__back {
+  font-family: var(--font-mono);
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--color-label);
+  transition: color 0.2s;
+}
+.ba-nav__back:hover { color: var(--color-accent); }
+
+/* Layout */
+.ba-main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 60px 28px 80px;
+}
+
+/* Header */
+.ba-header {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--color-stroke);
+}
+.ba-date {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 18px;
+}
+.ba-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 400; line-height: 1.2;
+  color: var(--color-text);
+}
+
+/* Body typography */
+.ba-body {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+.ba-body p { margin-bottom: 1.4em; }
+.ba-body h2,
+.ba-body h3,
+.ba-body .wp-block-heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  color: var(--color-text);
+  margin: 2em 0 0.7em;
+  line-height: 1.25;
+}
+.ba-body h2, .ba-body h2.wp-block-heading { font-size: clamp(22px, 2.5vw, 28px); }
+.ba-body h3, .ba-body h3.wp-block-heading { font-size: clamp(19px, 2vw, 23px); }
+.ba-body h4, .ba-body h4.wp-block-heading {
+  font-family: var(--font-mono);
+  font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 1.8em 0 0.6em;
+}
+.ba-body ul, .ba-body ol {
+  padding-left: 1.4em;
+  margin-bottom: 1.4em;
+  list-style: disc;
+}
+.ba-body ol { list-style: decimal; }
+.ba-body li { margin-bottom: 0.5em; }
+.ba-body blockquote, .ba-body .wp-block-quote {
+  border-left: 3px solid var(--color-accent2);
+  padding: 16px 22px;
+  background: var(--color-surface);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 1.8em 0;
+  font-style: italic;
+  color: var(--color-label);
+}
+.ba-body blockquote p, .ba-body .wp-block-quote p { margin-bottom: 0; }
+.ba-body hr, .ba-body .wp-block-separator {
+  border: none;
+  border-top: 1px solid var(--color-stroke);
+  margin: 2.4em 0;
+}
+.ba-body a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
+.ba-body a:hover { color: var(--color-accent2); }
+.ba-body img { border-radius: var(--radius-md); margin: 1.6em 0; }
+.ba-body strong { font-weight: 500; }
+
+/* CTA */
+.ba-cta {
+  margin-top: 56px;
+  padding: 28px 32px;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border-left: 3px solid var(--color-accent);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; flex-wrap: wrap;
+}
+.ba-cta p {
+  font-family: var(--font-display);
+  font-size: 20px; color: var(--color-text);
+}
+.ba-cta__link {
+  font-family: var(--font-mono);
+  font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--color-accent);
+  transition: color 0.2s;
+}
+.ba-cta__link:hover { color: var(--color-accent2); }
+
+/* Footer */
+.ba-footer {
+  background: var(--color-text);
+  padding: 24px 28px; text-align: center;
+}
+.ba-footer p {
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: 0.07em;
+  color: rgba(245,243,240,0.35);
+}
+.ba-footer a { color: rgba(245,243,240,0.35); transition: color 0.2s; }
+.ba-footer a:hover { color: var(--color-accent2); }

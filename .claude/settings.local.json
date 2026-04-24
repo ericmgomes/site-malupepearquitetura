@@ -15,7 +15,8 @@
       "mcp__Claude_in_Chrome__navigate",
       "mcp__Claude_in_Chrome__computer",
       "mcp__Claude_in_Chrome__read_page",
-      "mcp__Claude_in_Chrome__javascript_tool"
+      "mcp__Claude_in_Chrome__javascript_tool",
+      "PowerShell(cd \"C:\\\\Users\\\\ericg\\\\Documents\\\\PESSOAL\\\\DEV\\\\site-malupepe-arquitetura\" && pwsh -File transform-articles.ps1)"
     ]
   }
 }

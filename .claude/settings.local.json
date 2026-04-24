@@ -10,7 +10,12 @@
       "Bash(ls \"Bárbara e Wagner-20260422T214238Z-3-001.zip\")",
       "Bash(dir \"Bárbara e Wagner-20260422T214238Z-3-001.zip\")",
       "Bash(powershell -Command \"Expand-Archive -Path 'C:\\\\Users\\\\ericg\\\\Documents\\\\PESSOAL\\\\Malu Pepe Arquitetura\\\\Bárbara e Wagner-20260422T214238Z-3-001.zip' -DestinationPath 'C:\\\\Users\\\\ericg\\\\Documents\\\\PESSOAL\\\\Malu Pepe Arquitetura\\\\temp_extract' -Force && Get-ChildItem 'C:\\\\Users\\\\ericg\\\\Documents\\\\PESSOAL\\\\Malu Pepe Arquitetura\\\\temp_extract' -Recurse | Select-Object FullName\")",
-      "PowerShell(Copy-Item 'C:\\\\Users\\\\ericg\\\\Documents\\\\PESSOAL\\\\Malu Pepe Arquitetura\\\\logotipos\\\\malu-pepe-arquitetura-logo-365x100.png' 'C:\\\\Users\\\\ericg\\\\Documents\\\\PESSOAL\\\\DEV\\\\site-malupepe-arquitetura\\\\images\\\\logo.png' -Force)"
+      "PowerShell(Copy-Item 'C:\\\\Users\\\\ericg\\\\Documents\\\\PESSOAL\\\\Malu Pepe Arquitetura\\\\logotipos\\\\malu-pepe-arquitetura-logo-365x100.png' 'C:\\\\Users\\\\ericg\\\\Documents\\\\PESSOAL\\\\DEV\\\\site-malupepe-arquitetura\\\\images\\\\logo.png' -Force)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "mcp__Claude_in_Chrome__navigate",
+      "mcp__Claude_in_Chrome__computer",
+      "mcp__Claude_in_Chrome__read_page",
+      "mcp__Claude_in_Chrome__javascript_tool"
     ]
   }
 }

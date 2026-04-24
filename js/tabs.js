@@ -34,23 +34,23 @@
   var pfTabs  = document.querySelectorAll('[data-pf-filter]');
   var pfItems = document.querySelectorAll('[data-pf-cat]');
 
-  pfTabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      var filter = tab.dataset.pfFilter;
-
-      pfTabs.forEach(function (t) {
-        t.classList.toggle('active', t.dataset.pfFilter === filter);
-      });
-
-      pfItems.forEach(function (item) {
-        if (filter === 'todos') {
-          item.classList.remove('hidden');
-        } else {
-          var cats = item.dataset.pfCat.split(' ');
-          item.classList.toggle('hidden', !cats.includes(filter));
-        }
-      });
+  function activatePfFilter(filter) {
+    pfTabs.forEach(function (t) {
+      t.classList.toggle('active', t.dataset.pfFilter === filter);
     });
+    pfItems.forEach(function (item) {
+      if (filter === 'todos') {
+        item.classList.remove('hidden');
+      } else {
+        var cats = item.dataset.pfCat.split(' ');
+        item.classList.toggle('hidden', !cats.includes(filter));
+      }
+    });
+  }
+
+  pfTabs.forEach(function (tab) {
+    tab.addEventListener('click',      function () { activatePfFilter(tab.dataset.pfFilter); });
+    tab.addEventListener('mouseenter', function () { activatePfFilter(tab.dataset.pfFilter); });
   });
 
 })();

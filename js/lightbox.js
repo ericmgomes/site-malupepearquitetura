@@ -3,11 +3,12 @@
   var lightbox  = document.querySelector('.lightbox');
   if (!lightbox) return;
 
-  var imgEl    = lightbox.querySelector('.lightbox__img');
-  var nameEl   = lightbox.querySelector('.lightbox__project-name');
-  var closeBtn = lightbox.querySelector('.lightbox__close');
-  var prevBtn  = lightbox.querySelector('[data-lb-prev]');
-  var nextBtn  = lightbox.querySelector('[data-lb-next]');
+  var imgEl      = lightbox.querySelector('.lightbox__img');
+  var nameEl     = lightbox.querySelector('.lightbox__project-name');
+  var detailsEl  = lightbox.querySelector('.lightbox__details');
+  var closeBtn   = lightbox.querySelector('.lightbox__close');
+  var prevBtn    = lightbox.querySelector('[data-lb-prev]');
+  var nextBtn    = lightbox.querySelector('[data-lb-next]');
 
   /* Estado */
   var portfolioItems = [];  /* todos os itens do portfólio */
@@ -48,6 +49,16 @@
     } else {
       /* Foto única */
       gallery = [trigger.dataset.lbSrc];
+    }
+
+    if (detailsEl) {
+      detailsEl.innerHTML = '';
+      var cardTagline = trigger.querySelector('.portfolio-item__tagline');
+      var cardDetails = trigger.querySelector('.portfolio-item__details');
+      var cardCredit  = trigger.querySelector('.portfolio-item__credit');
+      if (cardTagline) detailsEl.appendChild(cardTagline.cloneNode(true));
+      if (cardDetails) detailsEl.appendChild(cardDetails.cloneNode(true));
+      if (cardCredit)  detailsEl.appendChild(cardCredit.cloneNode(true));
     }
 
     showPhoto(0);

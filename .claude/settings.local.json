@@ -16,7 +16,12 @@
       "mcp__Claude_in_Chrome__computer",
       "mcp__Claude_in_Chrome__read_page",
       "mcp__Claude_in_Chrome__javascript_tool",
-      "PowerShell(cd \"C:\\\\Users\\\\ericg\\\\Documents\\\\PESSOAL\\\\DEV\\\\site-malupepe-arquitetura\" && pwsh -File transform-articles.ps1)"
+      "PowerShell(cd \"C:\\\\Users\\\\ericg\\\\Documents\\\\PESSOAL\\\\DEV\\\\site-malupepe-arquitetura\" && pwsh -File transform-articles.ps1)",
+      "Bash(magick --version)",
+      "Bash(convert --version)",
+      "Bash(cwebp -version)",
+      "Bash(npm install *)",
+      "Bash(node convert-images.mjs)"
     ]
   }
 }

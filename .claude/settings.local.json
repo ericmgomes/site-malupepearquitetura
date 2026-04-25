@@ -21,7 +21,8 @@
       "Bash(convert --version)",
       "Bash(cwebp -version)",
       "Bash(npm install *)",
-      "Bash(node convert-images.mjs)"
+      "Bash(node convert-images.mjs)",
+      "Bash(node -e ' *)"
     ]
   }
 }

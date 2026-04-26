@@ -66,9 +66,22 @@
     document.body.style.overflow = 'hidden';
   }
 
+  /* ── Slug a partir do nome do projeto ── */
+  function toSlug(name) {
+    return name
+      .replace(/\s*\|.*$/, '')        /* remove subtítulo após | */
+      .replace(/^Projeto\s+/i, '')    /* remove prefixo "Projeto " */
+      .trim()
+      .toLowerCase()
+      .normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '');
+  }
+
   function closeLightbox() {
     lightbox.classList.remove('open');
     document.body.style.overflow = '';
+    history.replaceState(null, '', window.location.pathname + window.location.search);
   }
 
   /* ── Clique nos itens do portfólio ── */
@@ -77,6 +90,25 @@
     if (!trigger) return;
     collectPortfolio();
     openForItem(trigger);
+    var slug = toSlug(trigger.dataset.lbName || '');
+    if (slug) history.replaceState(null, '', '#projeto/' + slug);
+  });
+
+  /* ── Deep link: abre lightbox via hash na URL ── */
+  function openFromHash() {
+    var hash = window.location.hash; // ex: #projeto/bee-kids
+    if (!hash.startsWith('#projeto/')) return;
+    var slug = hash.replace('#projeto/', '');
+    collectPortfolio();
+    var trigger = portfolioItems.find(function (el) {
+      return toSlug(el.dataset.lbName || '') === slug;
+    });
+    if (trigger) openForItem(trigger);
+  }
+
+  /* Aguarda DOM + imagens inicializarem */
+  window.addEventListener('load', function () {
+    setTimeout(openFromHash, 100);
   });
 
   if (closeBtn) closeBtn.addEventListener('click', closeLightbox);

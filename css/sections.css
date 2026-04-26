@@ -300,27 +300,8 @@
   display: flex; justify-content: space-between; align-items: flex-end;
   gap: 16px; flex-wrap: wrap; margin-bottom: var(--space-md);
 }
-.blog__grid { display: flex; flex-direction: column; gap: 16px; }
-.blog__secondary-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
-
-.blog__instagram {
-  margin-top: var(--space-md);
-  background: var(--color-white);
-  border: 1px solid var(--color-stroke);
-  border-radius: var(--radius-lg);
-  padding: var(--space-sm) var(--space-md);
-  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
-  max-width: 560px;
-}
-.blog__instagram-avatar {
-  width: 50px; height: 50px; border-radius: 50%;
-  background: linear-gradient(135deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-}
-.blog__instagram-avatar svg { width: 26px; height: 26px; }
-.blog__instagram-text { flex: 1; }
-.blog__instagram-text strong { display: block; font-size: 16px; color: var(--color-text); margin-bottom: 2px; }
-.blog__instagram-text span  { font-size: 15px; color: var(--color-label); }
+.blog__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 700px) { .blog__grid { grid-template-columns: 1fr; } }
 
 /* ══════════════════════════════════
    DEPOIMENTOS

@@ -33,7 +33,8 @@
       "Bash(sed -i 's|<li><a href=\"projeto-de-bercario-e-escola-de-educacao-infantil-bee-kids\\\\.html\">[^<]*</a> <small>[^<]*</small></li>||g' blog/index.html)",
       "Bash(sed -i 's|<li><a href=\"projeto-de-marcenaria\\\\.html\">[^<]*</a> <small>[^<]*</small></li>||g' blog/index.html)",
       "Bash(sed -i 's|<li><a href=\"projeto-para-bercario-e-escola-de-educacao-infantil\\\\.html\">[^<]*</a> <small>[^<]*</small></li>||g' blog/index.html)",
-      "Bash(sed -i 's|<li><a href=\"projeto-integracao-cozinha-e-living\\\\.html\">[^<]*</a> <small>[^<]*</small></li>||g' blog/index.html)"
+      "Bash(sed -i 's|<li><a href=\"projeto-integracao-cozinha-e-living\\\\.html\">[^<]*</a> <small>[^<]*</small></li>||g' blog/index.html)",
+      "Bash(node inject-article-nav.mjs)"
     ]
   }
 }

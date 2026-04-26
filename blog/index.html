@@ -19,17 +19,8 @@
       padding: 14px 28px;
       display: flex; align-items: center; justify-content: space-between;
     }
-    .bl-nav__brand {
-      font-family: var(--font-display);
-      font-size: 22px; font-weight: 400;
-      color: var(--color-text);
-    }
-    .bl-nav__back {
-      font-family: var(--font-mono);
-      font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--color-label);
-      transition: color 0.2s;
-    }
+    .bl-nav__brand { font-family: var(--font-display); font-size: 22px; font-weight: 400; color: var(--color-text); }
+    .bl-nav__back  { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-label); transition: color 0.2s; }
     .bl-nav__back:hover { color: var(--color-accent); }
 
     .bl-hero {
@@ -38,79 +29,108 @@
       padding: 64px 28px 52px;
       max-width: var(--max-width); margin: 0 auto;
     }
-    .bl-hero__eyebrow {
-      font-family: var(--font-mono);
-      font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--color-accent); display: block; margin-bottom: 18px;
-    }
-    .bl-hero__title {
-      font-family: var(--font-display);
-      font-size: clamp(28px, 4vw, 48px);
-      color: var(--color-text); line-height: 1.2;
-      max-width: 620px; font-weight: 400;
-    }
-    .bl-hero__meta {
-      font-family: var(--font-mono);
-      font-size: 11px; letter-spacing: 0.08em;
-      color: var(--color-label); margin-top: 24px; display: block;
-    }
+    .bl-hero__eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent); display: block; margin-bottom: 18px; }
+    .bl-hero__title   { font-family: var(--font-display); font-size: clamp(28px, 4vw, 48px); color: var(--color-text); line-height: 1.2; max-width: 620px; font-weight: 400; }
+    .bl-hero__meta    { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--color-label); margin-top: 24px; display: block; }
 
+    /* ── Timeline ── */
     .bl-wrap {
       max-width: var(--max-width); margin: 0 auto;
-      padding: 0 28px 80px;
-      background: var(--color-bg);
-    }
-    .bl-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      border-left: 1px solid var(--color-stroke);
-      border-top: 1px solid var(--color-stroke);
-    }
-    @media (min-width: 600px) {
-      .bl-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (min-width: 900px) {
-      .bl-grid { grid-template-columns: repeat(3, 1fr); }
+      padding: 56px 28px 100px;
     }
 
-    .bl-card {
-      display: flex; flex-direction: column; gap: 10px;
-      padding: 22px 20px 20px;
-      border-right: 1px solid var(--color-stroke);
-      border-bottom: 1px solid var(--color-stroke);
-      background: var(--color-white);
-      transition: background 0.2s ease;
-      min-height: 130px;
+    .tl {
+      position: relative;
+      padding-left: 88px;
     }
-    .bl-card:hover { background: var(--color-surface); }
-    .bl-card__date {
+    /* Linha vertical */
+    .tl::before {
+      content: '';
+      position: absolute;
+      left: 68px; top: 8px; bottom: 0;
+      width: 1px;
+      background: var(--color-stroke);
+    }
+
+    /* Grupo de um ano */
+    .tl-group { position: relative; margin-bottom: 52px; }
+
+    /* Rótulo do ano */
+    .tl-year {
+      position: absolute;
+      left: -88px;
+      top: 2px;
+      width: 60px;
+      text-align: right;
       font-family: var(--font-mono);
-      font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+      font-size: 11px; letter-spacing: 0.1em;
       color: var(--color-accent);
+      line-height: 1.6;
     }
-    .bl-card__title {
-      font-family: var(--font-display);
-      font-size: clamp(16px, 1.6vw, 20px);
-      color: var(--color-text); line-height: 1.35; flex: 1;
-      font-weight: 400;
+
+    /* Cada post */
+    .tl-post {
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+      padding: 10px 0;
+      position: relative;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+      text-decoration: none;
     }
-    .bl-card__read {
+    .tl-post:hover { border-color: var(--color-stroke); }
+
+    /* Ponto na linha */
+    .tl-post::before {
+      content: '';
+      position: absolute;
+      left: -24px;
+      top: 50%; transform: translateY(-50%);
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--color-stroke);
+      transition: background 0.2s;
+    }
+    .tl-post:hover::before { background: var(--color-accent); }
+
+    .tl-post__date {
       font-family: var(--font-mono);
       font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--color-label); margin-top: 6px;
-      transition: color 0.2s;
+      color: var(--color-label);
+      white-space: nowrap;
+      min-width: 52px;
     }
-    .bl-card:hover .bl-card__read { color: var(--color-accent); }
+    .tl-post__title {
+      font-family: var(--font-display);
+      font-size: clamp(16px, 1.5vw, 20px);
+      color: var(--color-text);
+      line-height: 1.35; flex: 1;
+    }
+    .tl-post:hover .tl-post__title { color: var(--color-accent); }
+    .tl-post__arrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--color-label);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .tl-post:hover .tl-post__arrow { opacity: 1; }
+
+    /* Mobile: ano inline */
+    @media (max-width: 599px) {
+      .tl { padding-left: 20px; }
+      .tl::before { left: 0; }
+      .tl-post::before { left: -16px; }
+      .tl-year { position: static; width: auto; text-align: left; margin-bottom: 12px; padding-left: 12px; }
+      .tl-post__arrow { display: none; }
+    }
 
     .bl-footer {
       background: var(--color-text);
       padding: 28px 24px; text-align: center;
     }
-    .bl-footer p {
-      font-family: var(--font-mono);
-      font-size: 10px; letter-spacing: 0.07em;
-      color: rgba(245,243,240,0.35);
-    }
+    .bl-footer p { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.07em; color: rgba(245,243,240,0.35); }
     .bl-footer a { color: rgba(245,243,240,0.35); transition: color 0.2s; }
     .bl-footer a:hover { color: var(--color-accent2); }
   </style>
@@ -132,9 +152,9 @@
     </div>
   </div>
 
-  <!-- Grid (populated by JS) -->
+  <!-- Timeline (populated by JS) -->
   <div class="bl-wrap">
-    <div class="bl-grid" id="blog-grid"></div>
+    <div class="tl" id="blog-timeline"></div>
   </div>
 
   <!-- Footer -->
@@ -150,36 +170,50 @@
   <script>
     var monthsPT = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
 
-    function formatDate(iso) {
-      var d = new Date(iso);
-      if (isNaN(d)) return '';
-      return d.getDate() + ' ' + monthsPT[d.getMonth()] + ' ' + d.getFullYear();
-    }
+    var list     = document.getElementById('posts-list');
+    var timeline = document.getElementById('blog-timeline');
+    var countEl  = document.getElementById('post-count');
 
-    var list  = document.getElementById('posts-list');
-    var grid  = document.getElementById('blog-grid');
-    var count = document.getElementById('post-count');
+    if (list && timeline) {
+      var items = Array.from(list.querySelectorAll('li'));
+      if (countEl) countEl.textContent = items.length + ' artigos';
 
-    if (list && grid) {
-      var items = list.querySelectorAll('li');
-      if (count) count.textContent = items.length + ' artigos';
-
+      /* Agrupa por ano */
+      var byYear = {};
       items.forEach(function (li) {
         var a     = li.querySelector('a');
         var small = li.querySelector('small');
         if (!a) return;
+        var iso   = small ? small.textContent.replace(/[()]/g,'').trim() : '';
+        var d     = new Date(iso);
+        var year  = isNaN(d) ? '—' : d.getFullYear();
+        var mon   = isNaN(d) ? '' : d.getDate() + ' ' + monthsPT[d.getMonth()];
+        if (!byYear[year]) byYear[year] = [];
+        byYear[year].push({ href: a.getAttribute('href'), title: a.textContent.trim(), mon: mon });
+      });
 
-        var date  = small ? formatDate(small.textContent.replace(/[()]/g,'').trim()) : '';
-        var title = a.textContent.trim();
+      /* Renderiza do mais recente para o mais antigo */
+      Object.keys(byYear).sort(function(a,b){ return b - a; }).forEach(function (year) {
+        var group = document.createElement('div');
+        group.className = 'tl-group';
 
-        var card = document.createElement('a');
-        card.className = 'bl-card';
-        card.href = '/blog/' + a.getAttribute('href');
-        card.innerHTML =
-          (date ? '<span class="bl-card__date">' + date + '</span>' : '') +
-          '<span class="bl-card__title">' + title + '</span>' +
-          '<span class="bl-card__read">Ler artigo →</span>';
-        grid.appendChild(card);
+        var yearEl = document.createElement('div');
+        yearEl.className = 'tl-year';
+        yearEl.textContent = year;
+        group.appendChild(yearEl);
+
+        byYear[year].forEach(function (post) {
+          var a = document.createElement('a');
+          a.className = 'tl-post';
+          a.href = '/blog/' + post.href;
+          a.innerHTML =
+            '<span class="tl-post__date">' + post.mon + '</span>' +
+            '<span class="tl-post__title">' + post.title + '</span>' +
+            '<span class="tl-post__arrow">→</span>';
+          group.appendChild(a);
+        });
+
+        timeline.appendChild(group);
       });
     }
   </script>

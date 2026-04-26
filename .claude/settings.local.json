@@ -22,7 +22,13 @@
       "Bash(cwebp -version)",
       "Bash(npm install *)",
       "Bash(node convert-images.mjs)",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(awk '{print \"https://malupepearquitetura.com.br/\" $1 \"/  →  https://malupepearquitetura.com.br/blog/\" $1}')",
+      "Bash(grep -v \"^index$\")",
+      "WebSearch",
+      "Bash(grep \"\\\\.html$\")",
+      "Bash(grep -v \"^index\\\\.html$\")",
+      "Bash(node enrich-articles.mjs)"
     ]
   }
 }

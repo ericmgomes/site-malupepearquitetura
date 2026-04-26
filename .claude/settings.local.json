@@ -28,7 +28,12 @@
       "WebSearch",
       "Bash(grep \"\\\\.html$\")",
       "Bash(grep -v \"^index\\\\.html$\")",
-      "Bash(node enrich-articles.mjs)"
+      "Bash(node enrich-articles.mjs)",
+      "Bash(sed -i 's|<li><a href=\"projeto-hall-social-condominio\\\\.html\">[^<]*</a> <small>[^<]*</small></li>||g' blog/index.html)",
+      "Bash(sed -i 's|<li><a href=\"projeto-de-bercario-e-escola-de-educacao-infantil-bee-kids\\\\.html\">[^<]*</a> <small>[^<]*</small></li>||g' blog/index.html)",
+      "Bash(sed -i 's|<li><a href=\"projeto-de-marcenaria\\\\.html\">[^<]*</a> <small>[^<]*</small></li>||g' blog/index.html)",
+      "Bash(sed -i 's|<li><a href=\"projeto-para-bercario-e-escola-de-educacao-infantil\\\\.html\">[^<]*</a> <small>[^<]*</small></li>||g' blog/index.html)",
+      "Bash(sed -i 's|<li><a href=\"projeto-integracao-cozinha-e-living\\\\.html\">[^<]*</a> <small>[^<]*</small></li>||g' blog/index.html)"
     ]
   }
 }

@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Prevent flash of wrong theme -->
+  <script>(function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -118,6 +120,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#contato">Contato</a></li>
         <li><a href="/blog/">Blog</a></li>
       </ul>
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Mudar para modo escuro">
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        <svg class="icon-sun"  width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
 
       <a href="https://wa.me/5511999157600" target="_blank" rel="noopener"
          class="btn btn--whatsapp btn--sm navbar__cta-desktop"
@@ -812,16 +819,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <article class="blog-card blog-card--secondary reveal">
         <div class="blog-card__body">
           <div class="blog-card__meta">
-            <span class="tag tag--accent">Dicas</span>
-            <span class="blog-card__date">dez 2024</span>
+            <span class="tag tag--accent">Reforma Comercial</span>
+            <span class="blog-card__date">mai 2026</span>
           </div>
           <h3 class="blog-card__title text-balance">
-            Como Otimizar Espaços em Studios: Soluções Criativas para a Vida Moderna
+            7 Erros em Reformas Comerciais que Prejudicam Negócios
           </h3>
           <p class="blog-card__excerpt">
-            Viver em áreas reduzidas não precisa ser um desafio. Com um projeto adequado, é possível criar um ambiente funcional, confortável e sofisticado.
+            Decisões precipitadas ou mal planejadas comprometem experiência do cliente, fluxo operacional e o desempenho do negócio.
           </p>
-          <a href="/blog/como-otimizar-espacos-em-studios-solucoes-criativas-para-a-vida-moderna" class="blog-card__link">Ler artigo →</a>
+          <a href="/blog/7-erros-em-reformas-comerciais-que-prejudicam-negocios" class="blog-card__link">Ler artigo →</a>
         </div>
       </article>
 
@@ -829,14 +836,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <article class="blog-card blog-card--secondary reveal reveal-delay-1">
         <div class="blog-card__body">
           <div class="blog-card__meta">
-            <span class="tag tag--accent">Tendências</span>
-            <span class="blog-card__date">dez 2024</span>
+            <span class="tag tag--accent">Projeto Comercial</span>
+            <span class="blog-card__date">mai 2026</span>
           </div>
-          <h3 class="blog-card__title">Mocha Mousse: A Cor de 2025 e Suas Implicações no Design</h3>
+          <h3 class="blog-card__title">Projetos Comerciais e Experiência do Cliente</h3>
           <p class="blog-card__excerpt">
-            A cor do ano pela Pantone e como ela se traduz em projetos de arquitetura e decoração.
+            Como a arquitetura comercial expressa o DNA da marca e melhora atendimento, circulação e percepção do cliente.
           </p>
-          <a href="/blog/mocha-mousse-a-cor-de-2025-e-suas-implicacoes-no-design-e-no-estilo-de-vida" class="blog-card__link">Ler artigo →</a>
+          <a href="/blog/projetos-comerciais-e-experiencia-do-cliente" class="blog-card__link">Ler artigo →</a>
         </div>
       </article>
     </div>
@@ -1434,6 +1441,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="js/accordion.js" defer></script>
 <script src="js/tabs.js" defer></script>
 <script src="js/lightbox.js" defer></script>
+<script src="js/theme.js" defer></script>
 <script src="js/scroll-reveal.js" defer></script>
 <script src="js/parallax.js" defer></script>
 <script src="js/form.js" defer></script>

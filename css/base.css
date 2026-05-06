@@ -17,14 +17,36 @@ input, textarea, select { font: inherit; }
 
 /* ── CSS Custom Properties ── */
 :root {
-  --color-bg:      #F5F3F0;
-  --color-surface: #EDEAE5;
-  --color-stroke:  #C8C3BC;
-  --color-text:    #2C2925;
-  --color-label:   #6B6560;
-  --color-accent:  #8C6E4B;
-  --color-accent2: #B8956A;
-  --color-white:   #FAFAF8;
+  --color-bg:         #F5F3F0;
+  --color-surface:    #EDEAE5;
+  --color-stroke:     #C8C3BC;
+  --color-text:       #2C2925;
+  --color-label:      #6B6560;
+  --color-accent:     #8C6E4B;
+  --color-accent2:    #B8956A;
+  --color-white:      #FAFAF8;
+  --color-footer-bg:  #2C2925;
+}
+
+[data-theme="dark"] {
+  --color-bg:         #1C1A17;
+  --color-surface:    #242220;
+  --color-stroke:     #3A3530;
+  --color-text:       #EDE8E1;
+  --color-label:      #9C9590;
+  --color-accent:     #B8956A;
+  --color-accent2:    #C9A87A;
+  --color-white:      #262320;
+  --color-footer-bg:  #111009;
+}
+
+/* Prevent flash on theme switch */
+html { color-scheme: light dark; }
+body, .navbar, .ba-nav, .bl-nav {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+:root {
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body:    'DM Sans', system-ui, sans-serif;

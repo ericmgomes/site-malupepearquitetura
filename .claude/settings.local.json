@@ -35,7 +35,10 @@
       "Bash(sed -i 's|<li><a href=\"projeto-para-bercario-e-escola-de-educacao-infantil\\\\.html\">[^<]*</a> <small>[^<]*</small></li>||g' blog/index.html)",
       "Bash(sed -i 's|<li><a href=\"projeto-integracao-cozinha-e-living\\\\.html\">[^<]*</a> <small>[^<]*</small></li>||g' blog/index.html)",
       "Bash(node inject-article-nav.mjs)",
-      "WebFetch(domain:malupepearquitetura.com.br)"
+      "WebFetch(domain:malupepearquitetura.com.br)",
+      "Bash(pandoc \"C:\\\\Users\\\\ericg\\\\Documents\\\\PESSOAL\\\\Malu Pepe Arquitetura\\\\7 Erros em Reformas Comerciais que Prejudicam Negócios.docx\" -t plain)",
+      "mcp__Claude_in_Chrome__browser_batch",
+      "Bash(node inject-theme.mjs)"
     ]
   }
 }

@@ -369,7 +369,7 @@
    FOOTER
 ══════════════════════════════════ */
 .footer {
-  background: var(--color-text);
+  background: var(--color-footer-bg);
   padding: var(--space-xl) 24px var(--space-md);
 }
 .footer__grid {

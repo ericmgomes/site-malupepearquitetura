@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Prevent flash of wrong theme -->
+  <script>(function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
   <title>CASACOR 2018: as tendências de arquitetura para a sua casa</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/base.css">
@@ -62,6 +64,10 @@
   <nav class="ba-nav">
     <a href="/" class="ba-nav__brand">Malu Pepe Arquitetura</a>
     <a href="/blog/" class="ba-nav__back">&#8592; Blog</a>
+    <button id="theme-toggle" class="ba-theme-toggle" aria-label="Mudar para modo escuro">
+      <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+      <svg class="icon-sun"  width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
   </nav>
 
   <main class="ba-main">
@@ -98,6 +104,7 @@
   <footer class="ba-footer">
     <p>&copy; Malu Pepe Arquitetura &mdash; <a href="/">malupepearquitetura.com.br</a></p>
   </footer>
+  <script src="../js/theme.js" defer></script>
 
 <!-- ba-article-nav -->
 <a href="/blog/diferentes-tipos-de-box-e-suas-funcoes.html" class="ba-article-nav ba-article-nav--prev" title="Artigo anterior">

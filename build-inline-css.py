@@ -40,6 +40,13 @@ LOCAL_CSS_LINK = re.compile(
     r'[ \t]*<link\b(?=[^>]*\brel="stylesheet")(?=[^>]*\bhref="(?!https?:)[^"]+")[^>]*>[ \t]*\r?\n?',
     re.I,
 )
+# Detecta que a transformação já foi aplicada: o <link> do Google Fonts com
+# media="print". Sem essa guarda, uma segunda execução casaria o <link> de
+# dentro do <noscript> (que não tem media="print") e aninharia outro <noscript>.
+FONT_ALREADY_ASYNC = re.compile(
+    r'<link\b(?=[^>]*\bhref="https://fonts\.googleapis\.com/css2[^"]*")(?=[^>]*\bmedia="print")[^>]*>',
+    re.I,
+)
 # <link ... href="GOOGLE FONTS" ...> stylesheet (qualquer ordem), ainda não async
 FONT_LINK = re.compile(
     r'<link\b(?![^>]*\bmedia="print")(?=[^>]*\bhref="(https://fonts\.googleapis\.com/css2[^"]*)")(?=[^>]*\brel="stylesheet")[^>]*>',
@@ -56,6 +63,9 @@ def read_css(files):
 
 
 def make_font_async(html):
+    if FONT_ALREADY_ASYNC.search(html):
+        return html  # idempotente: já processado numa execução anterior
+
     def repl(m):
         href = m.group(1)
         return (

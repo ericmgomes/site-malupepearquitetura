@@ -1,27 +1,89 @@
 # Malu Pepe Arquitetura
 
-> Escritório de arquitetura residencial e comercial em São Paulo, fundado em 2007 pela arquiteta Malu Pepe (CAU A212431-9). Mais de 20 anos de experiência em projetos com condução completa do conceito à entrega.
+> Escritório de arquitetura residencial e comercial em São Paulo, fundado em 2007 pela arquiteta Malu Pepe (CAU A212431-9). Mais de 20 anos de experiência em projetos com condução completa, do conceito à entrega.
 
-## Sobre
+Malu Pepe é arquiteta formada pela Faculdade de Arquitetura e Urbanismo, com especialização em arquitetura de interiores. O escritório atua em projetos residenciais (apartamentos, casas, studios) e comerciais (escritórios, escolas, estabelecimentos), oferecendo projeto arquitetônico completo, projeto de interiores e decoração, marcenaria sob medida e acompanhamento de obra.
 
-Malu Pepe é arquiteta formada pela Faculdade de Arquitetura e Urbanismo, com especialização em arquitetura de interiores. O escritório atua em projetos residenciais (apartamentos, casas, studios) e comerciais (escritórios, escolas, estabelecimentos).
+Atendimento em São Paulo capital e região. Contato pelo WhatsApp +55 11 99915-7600 ou pelo Instagram [@malupepearquitetura](https://www.instagram.com/malupepearquitetura/).
 
-## Serviços
+## Páginas
 
-- Projeto arquitetônico residencial completo
-- Projeto de interiores e decoração
-- Projetos comerciais e corporativos
-- Marcenaria sob medida e acompanhamento de obra
+- [Página inicial](https://malupepearquitetura.com.br/): Apresentação do escritório, serviços, portfólio de projetos, depoimentos e FAQ.
+- [Serviços](https://malupepearquitetura.com.br/#servicos): Projeto arquitetônico residencial e comercial, interiores, marcenaria sob medida e acompanhamento de obra.
+- [Portfólio](https://malupepearquitetura.com.br/#portfolio): Projetos residenciais e comerciais executados pelo escritório.
+- [Depoimentos](https://malupepearquitetura.com.br/#depoimentos): Relatos de clientes sobre os projetos entregues.
+- [Perguntas frequentes](https://malupepearquitetura.com.br/#faq): Dúvidas comuns sobre prazos, custos e etapas de um projeto de arquitetura.
+- [Contato](https://malupepearquitetura.com.br/#contato): Formulário de contato, WhatsApp e e-mail do escritório.
+- [Blog](https://malupepearquitetura.com.br/blog/): Índice de todos os artigos sobre arquitetura, interiores e reformas.
 
-## Contato
+## Artigos do blog
 
-- Site: https://malupepearquitetura.com.br
-- WhatsApp: +55 11 99915-7600
-- Instagram: @malupepearquitetura
+- [12 edifícios para ficar de olho em 2021](https://malupepearquitetura.com.br/blog/12-edificios-para-ficar-de-olho-em-2021): 2021 é um ano que promete (ainda mais no que diz respeito à arquitetura).
+- [4 tendências em arquitetura e design de interiores para 2021](https://malupepearquitetura.com.br/blog/tendencias-arquitetura-e-design-de-interiores-para-2021): Depois de 2020, nosso comportamento não será igual. Ao longos dos últimos meses observamos o surgimento de novas rotinas, novas realidades, novos…
+- [5 dicas de decoração e estilo para o seu home office](https://malupepearquitetura.com.br/blog/5-dicas-de-decoracao-e-estilo-para-o-seu-home-office): Com o isolamento em 2020 as pessoas mudaram a forma como enxergavam seus lares.
+- [7 Erros em Reformas Comerciais que Prejudicam Negócios](https://malupepearquitetura.com.br/blog/7-erros-em-reformas-comerciais-que-prejudicam-negocios): Conheça os 7 erros mais comuns em reformas comerciais que comprometem a experiência do cliente, o fluxo operacional e o desempenho do negócio.
+- [A importância do Retrofit em Arquitetura: Conceitos, benefícios e processos](https://malupepearquitetura.com.br/blog/retrofit): Modernização, renovação, estes são os conceitos de retrofit. Quando nos referimos ao processo de retrofit em arquitetura e decoração, nos referimos à…
+- [A importância dos armários e closets](https://malupepearquitetura.com.br/blog/a-importancia-dos-armarios-e-closets): Seja dentro de um quarto ou em um outro lugar específico, os armários e closets são muito importantes para a decoração e a funcionalidade dos…
+- [A influência do layout do escritório para a equipe de trabalho](https://malupepearquitetura.com.br/blog/a-influencia-do-layout-do-escritorio-para-a-equipe-de-trabalho): Em decorrência das estações de trabalho inadequadas, que abrange desde o mobiliário à iluminação, temos a baixa produtividade no trabalho.
+- [Acessibilidade em projetos de arquitetura: segurança e conforto](https://malupepearquitetura.com.br/blog/acessibilidade-em-projetos-de-arquitetura-seguranca-e-conforto): No momento de construir, reformar ou decorar, a praticidade deve estar sempre presente!
+- [Áreas de descanso e convivência para o seu projeto](https://malupepearquitetura.com.br/blog/areas-de-descanso-e-convivencia-para-o-seu-projeto): Em todo projeto de arquitetura é necessário garantir espaços onde as pessoas possam relaxar, conversar e descansar.
+- [Arquitetura de interiores é uma arte](https://malupepearquitetura.com.br/blog/arquitetura-de-interiores-e-uma-arte): A arquitetura de interiores é uma disciplina que transcende a simples organização de espaços internos.
+- [Arquitetura e Iluminação](https://malupepearquitetura.com.br/blog/arquitetura-e-iluminacao): Um bom projeto de arquitetura e decoração está aliando a um bom projeto de iluminação.
+- [Arquitetura e urbanismo: o que é e como muda a sua vida](https://malupepearquitetura.com.br/blog/dicas-de-arquitetura-arquitetura-e-urbanismo-o-que-e-e-como-muda-a-sua-vida): A arquitetura foi descrita por alguns personagens históricos como a capacidade de transformar um pensamento ou ideia em algo concreto, esculpindo a…
+- [Arquitetura hospitalar ajuda a promover a saúde](https://malupepearquitetura.com.br/blog/arquitetura-hospitalar-ajuda-a-promover-a-saude): Um dos conceitos em alta no mercado atualmente é o de arquitetura hospitalar.
+- [Arquitetura inclusiva: mais acessibilidade para os seus projetos](https://malupepearquitetura.com.br/blog/arquitetura-inclusiva-mais-acessibilidade-para-os-seus-projetos): A arquitetura acompanha as principais necessidades do ser humano, favorecendo um ambiente que traga mais praticidade para o dia a dia ao mesmo tempo…
+- [Arquitetura para ambientes educativos](https://malupepearquitetura.com.br/blog/arquitetura-para-ambientes-educativos): A arquitetura garante o melhor aproveitamento de diferentes espaços.
+- [Arquitetura para escritórios: conheça as tendências](https://malupepearquitetura.com.br/blog/arquitetura-para-escritorios-conheca-as-tendencias): As tendências de arquitetura são mais do que uma moda, elas representam os principais anseios e respostas às necessidades do nosso tempo.
+- [Arquitetura: luxo ou necessidade?](https://malupepearquitetura.com.br/blog/arquitetura-luxo-ou-necessidade): Ter um lugar para morar e um espaço que atenda suas necessidades de trabalho fazem parte da sua qualidade de vida.
+- [As maiores tendências para as cozinhas em 2019](https://malupepearquitetura.com.br/blog/as-maiores-tendencias-para-as-cozinhas-em-2019): A cozinha é cada vez mais uma área social da casa. Ocupando um lugar central nas residências, é natural que as cozinhas sejam mais elaboradas, unindo…
+- [As principais tendências em revestimentos para o seu projeto](https://malupepearquitetura.com.br/blog/as-principais-tendencias-em-revestimentos-para-o-seu-projeto): Os revestimentos são muito importantes nos projetos de arquitetura, ajudando a dar o tom de cada ambiente.
+- [Automação Residencial em Apartamentos SP: Tecnologia Inteligente Sem Gastar Muito](https://malupepearquitetura.com.br/blog/automacao-residencial-apartamentos-sp): Automação residencial em apartamentos em SP sem gastar muito: saiba por onde começar, quais sistemas têm melhor custo-benefício e como integrar…
+- [Avalie se um arquiteto é o profissional certo](https://malupepearquitetura.com.br/blog/como-avaliar-se-um-arquiteto-e-o-profissional-certo-para-seu-projeto): Escolher um arquiteto para um projeto é algo que deve ser feito com atenção.
+- [CASACOR 2018: as tendências de arquitetura para a sua casa](https://malupepearquitetura.com.br/blog/casacor-2018-as-tendencias-de-arquitetura-para-a-sua-casa): A CASACOR traz diversas tendências para quem deseja levar inovações para os seus projetos de arquitetura.
+- [Casas elevadas do solo: Vantagens e projetos para se inspirar](https://malupepearquitetura.com.br/blog/casas-elevadas-do-solo-vantagens-e-projetos-para-se-inspirar): Em um país de predominância de clima tropical (quente e úmido) como o Brasil, manter o conforto térmico dentro das residências pode ser um desafio.
+- [Como escolher as cores das paredes do seu projeto de arquitetura](https://malupepearquitetura.com.br/blog/como-escolher-as-cores-das-paredes-do-seu-projeto-de-arquitetura): Ela pode ser um ponto de partida para o seu projeto ou a última escolha da sua decoração, mas a cor da parede é fundamental para que você crie o…
+- [Como escolher uma porta para cada ambiente](https://malupepearquitetura.com.br/blog/como-escolher-uma-porta-para-cada-ambiente): No momento de construir ou reformar, é necessário prestar atenção em cada detalhe – e isso inclui também às portas.
+- [Como incluir plantas em seu projeto de arquitetura](https://malupepearquitetura.com.br/blog/como-incluir-plantas-em-seu-projeto-de-arquitetura): A correria do dia a dia fez com que o ser humano contemporâneo tivesse poucas oportunidades de entrar em contato com a natureza.
+- [Como os aromas influenciam nos ambientes](https://malupepearquitetura.com.br/blog/como-os-aromas-influenciam-nos-ambientes): O olfato representa cerca de 3,5% da nossa percepção do mundo que nos cerca.
+- [Como Otimizar Espaços em Studios: Soluções Criativas para a Vida Moderna](https://malupepearquitetura.com.br/blog/como-otimizar-espacos-em-studios-solucoes-criativas-para-a-vida-moderna): A vida urbana está cada vez mais compacta. Em bairros como a Vila Mariana, em São Paulo, os studios — apartamentos que combinam sala, quarto e…
+- [Como pensar o estilo escandinavo para o seu projeto de arquitetura](https://malupepearquitetura.com.br/blog/como-pensar-o-estilo-escandinavo-para-o-seu-projeto-de-arquitetura): O estilo escandinavo propõe o equilíbrio entre formas contemporâneas, aconchego e simplicidade .
+- [Como projetar um quarto de criança](https://malupepearquitetura.com.br/blog/como-projetar-um-quarto-de-crianca): O projeto de arquitetura para um quarto infantil deve ser feito para garantir conforto e segurança para as crianças.
+- [Comunicação visual](https://malupepearquitetura.com.br/blog/comunicacao-visual): Quando a comunicação visual é aplicada ao projeto de arquitetura e interiores, os ambientes ganham mais identidade.
+- [Cores neutras no projeto de arquitetura e construção](https://malupepearquitetura.com.br/blog/cores-neutras-no-projeto-de-arquitetura-e-decoracao): As cores neutras são versáteis e atemporais, e ao mesmo tempo trazem uma sensação de tranquilidade, amplitude e ambiente iluminado, tornando os…
+- [Covid e Urbanismo](https://malupepearquitetura.com.br/blog/covid-e-urbanismo): Covid e Urbanismo A pandemia e o isolamento social trouxeram mudanças profundas às nossas vidas e também às nossas relações.
+- [DECORAÇÃO Dicas de decoração com paisagismo](https://malupepearquitetura.com.br/blog/decoracao-dicas-de-decoracao-com-paisagismo): Quem gosta de deixar sua casa elegante, ou mesmo caprichar na hora de decorar um jardim, um cômodo, um local de evento seja ele de pequeno ou grande…
+- [Dicas para evitar atrasos em sua obra](https://malupepearquitetura.com.br/blog/dicas-para-evitar-atrasos-em-sua-obra): Para muitas pessoas, ao começar uma obra – das mais simples às mais complexas, é comum ter o sentimento que se tratará de algo com grandes chances de…
+- [Diferentes tipos de BOX e suas funções](https://malupepearquitetura.com.br/blog/diferentes-tipos-de-box-e-suas-funcoes): Sabemos que na hora de reformar ou decorar o banheiro, um item que acaba sendo pensado por último é o box de vidro.
+- [Escritório de arquitetura: como escolher um para o seu projeto](https://malupepearquitetura.com.br/blog/escritorio-de-arquitetura-como-escolher-um-para-o-seu-projeto): No momento de planejar uma obra, o ideal é contar com um bom arquiteto.
+- [Estilo folk no seu projeto de arquitetura: entenda o que é](https://malupepearquitetura.com.br/blog/estilo-folk-no-seu-projeto-de-arquitetura-entenda-o-que-e): Se você nunca ouviu falar no estilo folk, prepare-se para essa tendência! Ela é um conceito de decoração inspirado nos nômades africanos.
+- [Estilo industrial no seu projeto de arquitetura](https://malupepearquitetura.com.br/blog/estilo-industrial-no-seu-projeto-de-arquitetura): O estilo industrial remete ao passado de uma das cidades mais inspiradoras do mundo: Nova York.
+- [Gestão Profissional de Obra: Como Evitar Desperdícios e Realizar o Projeto que Você Idealizou](https://malupepearquitetura.com.br/blog/gestao-profissional-de-obra-como-evitar-desperdicios): Como a gestão profissional de obra evita desperdícios, reduz custos e garante que sua reforma ou construção residencial saia exatamente como foi…
+- [Jardins Verticais e hortas urbanas: duas tendências que vieram para ficar](https://malupepearquitetura.com.br/blog/jardins-verticais-e-hortas-urbanas-duas-tendencias-que-vieram-para-ficar): Com cidades cada vez mais aglomeradas e com cenários cada vez mais cinzentos, não é de se estranhar que, nos últimos anos, muitos projetos de…
+- [Living Coral: saiba mais sobre a cor de 2019](https://malupepearquitetura.com.br/blog/living-coral-saiba-mais-sobre-a-cor-de-2019): Todos os anos a Pantone, referência mundial em controle e especificações de cores, elege uma tonalidade que aponta como tendência para o período.
+- [Marcenaria Sob Medida ou Móvel de Linha: O Que Realmente Vale no Seu Projeto Residencial](https://malupepearquitetura.com.br/blog/marcenaria-sob-medida-ou-movel-de-linha-projeto-residencial): Quando vale marcenaria sob medida e quando o móvel de linha resolve melhor: critérios técnicos para decidir e equilibrar os dois em projetos…
+- [Marcenaria Sob Medida: O Toque Final para Ambientes Sofisticados e Funcionais](https://malupepearquitetura.com.br/blog/marcenaria-sob-medida-o-toque-final-para-ambientes-sofisticados-e-funcionais): A marcenaria sob medida é uma arte que une estética e funcionalidade, sendo o elemento perfeito para finalizar a decoração de interiores com…
+- [Mocha Mousse: A Cor de 2025 e Suas Implicações no Design e no Estilo de Vida](https://malupepearquitetura.com.br/blog/mocha-mousse-a-cor-de-2025-e-suas-implicacoes-no-design-e-no-estilo-de-vida): Um tom, múltiplas histórias No início de dezembro de 2024, o Pantone Color Institute anunciou o “Mocha Mousse” como a cor do ano para 2025.
+- [Neuroarquitetura em Jardins: Projetando Espaços Externos para Relaxamento e Bem-Estar](https://malupepearquitetura.com.br/blog/neuroarquitetura-em-jardins-projetando-espacos-externos-para-relaxamento-e-bem-estar): A neuroarquitetura vai além do design interno e pode ser aplicada com grande impacto em áreas externas. Ao projetar jardins e áreas de convivência, é…
+- [O Papel da Luminotécnica na Criação de Ambientes Residenciais Confortáveis](https://malupepearquitetura.com.br/blog/o-papel-da-luminotecnica-na-criacao-de-ambientes-residenciais-confortaveis): A luminotécnica é a arte e a ciência de projetar sistemas de iluminação que valorizem os espaços e melhorem a qualidade de vida dos moradores.
+- [O que é Neuroarquitetura](https://malupepearquitetura.com.br/blog/neuroarquitetura-descubra-o-que-significa-este-conceito): A neurociência é uma das grandes tendências hoje em dia, revolucionando a medicina, a psicologia e também a arquitetura.
+- [Os cuidados ao projetar um escritório](https://malupepearquitetura.com.br/blog/os-cuidados-ao-projetar-um-escritorio): Um escritório deve ser um espaço que estimule a concentração, produtividade, criatividade e eficiência, garantindo o sucesso do empreendimento.
+- [Paisagismo e Ambiente Corporativo](https://malupepearquitetura.com.br/blog/paisagismo-e-ambiente-corporativo): Não apenas como complemento ao projeto de arquitetura, o projeto de paisagismo, agrega valor ao mesmo, e atualmente o paisagismo é abordado com mais…
+- [Papel de parede: o que você precisa saber ao escolher](https://malupepearquitetura.com.br/blog/papel-de-parede-o-que-voce-precisa-saber-ao-escolher): O papel de parede é um método simples, prático e econômico para mudar a decoração de diversos ambientes.
+- [Planejando uma varanda gourmet no seu projeto de arquitetura](https://malupepearquitetura.com.br/blog/planejando-uma-varanda-gourmet-no-seu-projeto-de-arquitetura): Cada vez mais frequente em projetos de arquitetura, a varanda gourmet é um excelente ambiente para receber os amigos ou a sua família em casa.
+- [Planejando vãos em seu projeto de arquitetura](https://malupepearquitetura.com.br/blog/planejando-vaos-em-seu-projeto-de-arquitetura): As tecnologias na construção civil também estão evoluindo e proporcionando novas possibilidades para criar espaços cada vez mais personalizados.
+- [Projeto de arquitetura para varandas: o que você precisa saber](https://malupepearquitetura.com.br/blog/projeto-de-arquitetura-para-varandas-o-que-voce-precisa-saber): A varanda é, muitas vezes, um quintal ou um jardim para quem vive em apartamentos.
+- [PROJETO Escola Infantil passo a passo para começar a sua](https://malupepearquitetura.com.br/blog/projeto-escola-infantil-passo-a-passo-para-comecar-a-sua): Elaborar projetos que envolvam estruturas para atender escolas e berçários requer atenção e entendimento das normas técnicas de segurança.
+- [Projetos Comerciais e Experiência do Cliente](https://malupepearquitetura.com.br/blog/projetos-comerciais-e-experiencia-do-cliente): Entenda como projetos comerciais expressam o DNA da marca e melhoram atendimento, circulação, conforto e percepção do cliente.
+- [Reforma de Apartamento na Vila Mariana: Como Equilibrar Custo e Design Autoral](https://malupepearquitetura.com.br/blog/reforma-apartamento-vila-mariana-custo-design): Como equilibrar custo e design autoral em uma reforma de apartamento na Vila Mariana: estratégias práticas para quem quer personalidade e…
+- [Restaurantes: medidas que reforçam a segurança são principal tendência para 2021](https://malupepearquitetura.com.br/blog/restaurantes-medidas-que-reforcam-a-seguranca-sao-principal-tendencia-para-2021): Os longos meses de pandemia tiveram um enorme impacto sobre toda a indústria de entretenimento e hospitalidade, incluindo hotéis, cinemas, teatros, e…
+- [Rodapés: um pequeno detalhe que faz diferença na arquitetura](https://malupepearquitetura.com.br/blog/rodapes-um-pequeno-detalhe-que-faz-diferenca-na-arquitetura): Os rodapés são mais do que protetores da junção entre piso e parede.
+- [Soluções Sustentáveis: Como a Automação Residencial Reduz o Consumo Energético](https://malupepearquitetura.com.br/blog/solucoes-sustentaveis-como-a-automacao-residencial-reduz-o-consumo-energetico): A automação residencial não só traz conforto e praticidade para o dia a dia, mas também desempenha um papel crucial na redução do consumo de energia…
+- [Sustentabilidade e Arquitetura de Interiores](https://malupepearquitetura.com.br/blog/sustentabilidade-e-arquitetura-de-interiores): Os profissionais do setor da construção civil têm a necessidade de reavaliar suas formas de atuação e princípios, devido ao grande impacto ambiental…
+- [Tendências em “Paisagismo de Interiores” ao redor do mundo](https://malupepearquitetura.com.br/blog/tendencias-em-paisagismo-de-interiores-ao-redor-do-mundo): O uso de plantas na decoração é um movimento que já vinha crescendo, e muito, nos últimos anos, o chamado “Urban Jungle” (Selva Urbana).
+- [Uso do mármore em projetos de arquitetura](https://malupepearquitetura.com.br/blog/uso-do-marmore-em-projetos-de-arquitetura): Um dos materiais mais tradicionais na construção civil é a pedra.
+- [Vale a pena reformar imóveis alugados?](https://malupepearquitetura.com.br/blog/vale-a-pena-reformar-imoveis-alugados): Nada como viver em um espaço que nos faz sentir mais acolhidos.
 
-## Blog
+## Optional
 
-O blog publica conteúdo sobre arquitetura, design de interiores, tendências e dicas práticas para projetos residenciais e comerciais.
-
-- Blog: https://malupepearquitetura.com.br/blog/
-- Sitemap: https://malupepearquitetura.com.br/sitemap.xml
+- [Sitemap](https://malupepearquitetura.com.br/sitemap.xml): Lista completa das URLs do site em XML.
+- [robots.txt](https://malupepearquitetura.com.br/robots.txt): Regras de rastreamento para crawlers.

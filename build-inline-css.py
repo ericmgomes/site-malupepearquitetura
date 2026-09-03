@@ -25,6 +25,8 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 def css_for(path_rel):
     if path_rel == "index.html":
         return ["css/base.css", "css/components.css", "css/sections.css", "css/responsive.css"]
+    if path_rel == "404.html":
+        return ["css/base.css", "css/components.css"]
     if path_rel == "blog/index.html":
         return ["css/base.css", "css/components.css"]
     if path_rel.startswith("blog/"):
@@ -105,7 +107,7 @@ def process(path_rel):
 
 
 def main():
-    targets = ["index.html"] + [
+    targets = ["index.html", "404.html"] + [
         os.path.relpath(p, ROOT).replace("\\", "/")
         for p in glob.glob(os.path.join(ROOT, "blog", "*.html"))
     ]

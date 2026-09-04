@@ -60,6 +60,22 @@
     /* Grupo de um ano */
     .tl-group { position: relative; margin-bottom: 52px; }
 
+    /* Anos mais antigos: escondidos até clicar em "carregar mais".
+       É só display:none — os <a> continuam no DOM desde o carregamento,
+       então o Google rastreia e segue todos os 64 links normalmente. */
+    .tl-group[hidden] { display: none; }
+
+    .tl-mais { margin: 8px 0 64px; text-align: center; }
+    .tl-mais__contagem {
+      display: block;
+      margin-top: 12px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-label);
+    }
+
     /* Rótulo do ano */
     .tl-year {
       position: absolute;
@@ -202,10 +218,23 @@
         byYear[year].push({ href: a.getAttribute('href'), title: a.textContent.trim(), mon: mon });
       });
 
+      /* Quantos anos mostrar antes do "carregar mais".
+         Por ano, não por quantidade de artigos, para não cortar um ano no meio. */
+      var ANOS_VISIVEIS = 2;
+
+      var anos = Object.keys(byYear).sort(function(a,b){ return b - a; });
+      var ocultos = [];   /* grupos escondidos */
+      var qtdOculta = 0;  /* artigos escondidos, para o rótulo do botão */
+
       /* Renderiza do mais recente para o mais antigo */
-      Object.keys(byYear).sort(function(a,b){ return b - a; }).forEach(function (year) {
+      anos.forEach(function (year, iAno) {
         var group = document.createElement('div');
         group.className = 'tl-group';
+        if (iAno >= ANOS_VISIVEIS) {
+          group.hidden = true;
+          ocultos.push(group);
+          qtdOculta += byYear[year].length;
+        }
 
         var yearEl = document.createElement('div');
         yearEl.className = 'tl-year';
@@ -227,6 +256,34 @@
 
         timeline.appendChild(group);
       });
+
+      /* Botão "carregar mais": só revela o que já está no DOM. */
+      if (ocultos.length) {
+        var wrap = document.createElement('div');
+        wrap.className = 'tl-mais';
+
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'btn btn--outline';
+        btn.setAttribute('aria-expanded', 'false');
+        btn.textContent = 'Ver artigos anteriores';
+
+        var contagem = document.createElement('span');
+        contagem.className = 'tl-mais__contagem';
+        contagem.textContent = 'mais ' + qtdOculta + ' artigos, de ' +
+          anos[anos.length - 1] + ' a ' + anos[ANOS_VISIVEIS];
+
+        btn.addEventListener('click', function () {
+          ocultos.forEach(function (g) { g.hidden = false; });
+          btn.setAttribute('aria-expanded', 'true');
+          wrap.remove();
+          ocultos[0].querySelector('.tl-post').focus();
+        });
+
+        wrap.appendChild(btn);
+        wrap.appendChild(contagem);
+        timeline.appendChild(wrap);
+      }
     }
   </script>
 </body>

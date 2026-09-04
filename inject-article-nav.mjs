@@ -39,7 +39,8 @@ articles.forEach(function (filename, i) {
     return;
   }
 
-  let html = readFileSync(filepath, 'utf8');
+  // replace(/^\uFEFF/, '') — BOM antes do <!DOCTYPE> deixa o HTML malformado
+  let html = readFileSync(filepath, 'utf8').replace(/^\uFEFF/, '');
 
   // Remove previously injected nav (idempotent)
   html = html.replace(/<!-- ba-article-nav -->[\s\S]*?<!-- \/ba-article-nav -->\n?/g, '');

@@ -78,7 +78,7 @@ def main():
 
     reescritos = 0
     for p in paginas():
-        with open(p, "r", encoding="utf-8") as f:
+        with open(p, "r", encoding="utf-8-sig") as f:
             html = f.read()
         novo = SCRIPT_SRC.sub(r"\1\2\3.min\4", html)
         if novo != html:

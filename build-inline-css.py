@@ -86,9 +86,10 @@ def minify_css(css):
 def read_css(files):
     parts = []
     for rel in files:
-        with open(os.path.join(ROOT, rel), "r", encoding="utf-8") as f:
-            # o BOM de alguns arquivos viraria lixo no meio do CSS concatenado
-            parts.append(f.read().lstrip("﻿").strip())
+        # utf-8-sig descarta o BOM na leitura; sem isso ele viraria lixo no
+        # meio do CSS concatenado
+        with open(os.path.join(ROOT, rel), "r", encoding="utf-8-sig") as f:
+            parts.append(f.read().strip())
     return minify_css("\n\n".join(parts))
 
 
@@ -134,7 +135,7 @@ def process(path_rel):
     if not files:
         return None
     full = os.path.join(ROOT, path_rel)
-    with open(full, "r", encoding="utf-8") as f:
+    with open(full, "r", encoding="utf-8-sig") as f:
         html = f.read()
     orig = html
     html = make_font_async(html)

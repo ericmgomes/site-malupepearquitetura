@@ -74,7 +74,7 @@ def processa_valor(valor, attr, dir_html):
 def processa(path_rel):
     full = os.path.join(ROOT, path_rel)
     dir_html = os.path.dirname(full)
-    with open(full, "r", encoding="utf-8") as f:
+    with open(full, "r", encoding="utf-8-sig") as f:
         html = f.read()
     orig = html
 

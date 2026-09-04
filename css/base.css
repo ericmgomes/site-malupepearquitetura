@@ -46,11 +46,51 @@ body, .navbar, .ba-nav, .bl-nav {
   transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
+/* ── Fallbacks com métricas ajustadas ──────────────────────────────────
+   As webfonts carregam de forma assíncrona, então a página é desenhada
+   primeiro com a fonte de sistema e redesenhada quando elas chegam. Se as
+   duas ocupam espaço diferente, tudo se move — é o CLS que o PageSpeed
+   media (0,117, causado pelo banner de cookies mudando de altura).
+
+   Estas famílias intermediárias são a fonte local com as métricas
+   corrigidas para casar com a webfont, então as quebras de linha ficam
+   iguais nas duas renderizações e nada se desloca.
+
+   Valores medidos com canvas measureText a 1000px:
+     size-adjust     = largura média da webfont ÷ largura média da local
+     ascent/descent  = métricas da webfont ÷ size-adjust
+   Se a fonte local não existir no sistema, o @font-face falha e o próximo
+   item da pilha entra normalmente. */
+@font-face {
+  font-family: 'DM Sans Fallback';
+  src: local('Arial');
+  size-adjust: 102.4%;
+  ascent-override: 96.9%;
+  descent-override: 30.3%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Cormorant Fallback';
+  src: local('Georgia');
+  size-adjust: 89.5%;
+  ascent-override: 103.3%;
+  descent-override: 32.1%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'JetBrains Fallback';
+  src: local('Courier New');
+  size-adjust: 100%;
+  ascent-override: 102%;
+  descent-override: 30%;
+  line-gap-override: 0%;
+}
+
 :root {
 
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body:    'DM Sans', system-ui, sans-serif;
-  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+  --font-display: 'Cormorant Garamond', 'Cormorant Fallback', Georgia, serif;
+  --font-body:    'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'JetBrains Fallback', 'Courier New', monospace;
 
   --space-xs:  8px;
   --space-sm:  16px;

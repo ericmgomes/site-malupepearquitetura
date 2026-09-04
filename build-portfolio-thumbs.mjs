@@ -26,7 +26,9 @@ import { fileURLToPath } from 'url';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const HTML = join(ROOT, 'index.html');
-const LARGURAS = [400, 800];
+// 200 cobre DPR1 no mobile (~144px de caixa), 400 cobre DPR2 e o desktop,
+// 800 cobre DPR3 e desktop retina. O browser escolhe pelo sizes abaixo.
+const LARGURAS = [200, 400, 800];
 
 const IMG_RE = /<img class="portfolio-item__img"([^>]*?)>/g;
 const SRC_RE = /(?<![a-z])src="([^"]+)"/;

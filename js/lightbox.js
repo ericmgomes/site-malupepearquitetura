@@ -24,11 +24,25 @@
       });
   }
 
+  /* ── Troca a foto sem pulo de layout ──
+     Trocar o src direto faz o <img> ficar sem tamanho intrínseco entre a foto
+     antiga sair e a nova carregar: a caixa colapsa para o min-height e depois
+     salta para o tamanho final (medido: 648px -> 288px numa galeria com fotos
+     de proporções diferentes). Carregando fora da tela primeiro, a foto
+     anterior continua visível até a nova estar pronta, e a caixa muda de
+     tamanho uma vez só. */
+  function trocarFoto(url) {
+    if (!imgEl) return;
+    var pre = new Image();
+    pre.onload = pre.onerror = function () { imgEl.src = url; };
+    pre.src = url;
+  }
+
   /* ── Exibe foto dentro da galeria atual ── */
   function showPhoto(index) {
     if (!gallery.length) return;
     current = ((index % gallery.length) + gallery.length) % gallery.length;
-    if (imgEl)  { imgEl.src = gallery[current]; imgEl.alt = projectName; }
+    if (imgEl)  { trocarFoto(gallery[current]); imgEl.alt = projectName; }
     if (nameEl) {
       nameEl.textContent = gallery.length > 1
         ? projectName + '  ' + (current + 1) + ' / ' + gallery.length

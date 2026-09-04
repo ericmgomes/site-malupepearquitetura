@@ -59,11 +59,18 @@ body, .navbar, .ba-nav, .bl-nav {
    Valores medidos com canvas measureText a 1000px:
      size-adjust     = largura média da webfont ÷ largura média da local
      ascent/descent  = métricas da webfont ÷ size-adjust
-   Se a fonte local não existir no sistema, o @font-face falha e o próximo
-   item da pilha entra normalmente. */
+   Se nenhuma das fontes locais existir, o @font-face falha e o próximo item
+   da pilha entra normalmente.
+
+   Cada face lista mais de uma fonte local porque as da Microsoft não existem
+   no Linux — inclusive no ambiente do Lighthouse. Só entram aqui pares
+   metricamente idênticos por design (a família Liberation foi criada para
+   substituir as da Microsoft mantendo as métricas), senão um size-adjust
+   único não serviria para as duas. É por isso que a base do Cormorant é
+   Times New Roman e não Georgia: Georgia não tem equivalente Liberation. */
 @font-face {
   font-family: 'DM Sans Fallback';
-  src: local('Arial');
+  src: local('Arial'), local('Liberation Sans'), local('Helvetica');
   size-adjust: 102.4%;
   ascent-override: 96.9%;
   descent-override: 30.3%;
@@ -71,15 +78,15 @@ body, .navbar, .ba-nav, .bl-nav {
 }
 @font-face {
   font-family: 'Cormorant Fallback';
-  src: local('Georgia');
-  size-adjust: 89.5%;
-  ascent-override: 103.3%;
-  descent-override: 32.1%;
+  src: local('Times New Roman'), local('Liberation Serif'), local('Tinos');
+  size-adjust: 96.6%;
+  ascent-override: 95.6%;
+  descent-override: 29.7%;
   line-gap-override: 0%;
 }
 @font-face {
   font-family: 'JetBrains Fallback';
-  src: local('Courier New');
+  src: local('Courier New'), local('Liberation Mono'), local('Cousine');
   size-adjust: 100%;
   ascent-override: 102%;
   descent-override: 30%;

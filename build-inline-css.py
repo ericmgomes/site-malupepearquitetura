@@ -6,7 +6,8 @@ Para cada página:
   1. Torna o <link> do Google Fonts assíncrono (media=print + onload), com
      fallback <noscript>.
   2. Inlina os CSS locais (css/*.css e blog/article.css) num único <style>,
-     entre os marcadores <!-- INLINE-CSS:START files=... --> ... END.
+     entre os marcadores <!-- INLINE-CSS:START files=... --> ... END,
+     minificados com esbuild (os arquivos-fonte seguem legíveis).
 
 Os arquivos em css/ e blog/article.css continuam sendo a fonte da verdade.
 Sempre que editar qualquer CSS, rode:  python build-inline-css.py
@@ -17,9 +18,12 @@ conteúdo inline a partir dos arquivos-fonte.
 """
 import os
 import re
+import sys
 import glob
+import subprocess
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
+_MINIFY_OK = True  # vira False se o esbuild nao estiver disponivel
 
 # Página -> lista ordenada de CSS (caminhos relativos à raiz do repo, p/ leitura)
 def css_for(path_rel):
@@ -54,12 +58,38 @@ FONT_LINK = re.compile(
 )
 
 
+def minify_css(css):
+    """Minifica via esbuild. Sem esbuild, devolve o CSS como está.
+
+    Não dá para minificar com regex aqui: o projeto usa calc(), url(data:...)
+    e content:, casos em que remover espaço muda o significado ou corrompe o
+    valor. O esbuild é devDependency — nada disso vai para o site.
+    """
+    global _MINIFY_OK
+    exe = "npx.cmd" if os.name == "nt" else "npx"
+    try:
+        r = subprocess.run(
+            [exe, "esbuild", "--minify", "--loader=css", "--log-level=error"],
+            input=css.encode("utf-8"),
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+        )
+    except (OSError, FileNotFoundError):
+        _MINIFY_OK = False
+        return css
+    if r.returncode != 0 or not r.stdout.strip():
+        _MINIFY_OK = False
+        sys.stderr.write(r.stderr.decode("utf-8", "replace"))
+        return css
+    return r.stdout.decode("utf-8").strip()
+
+
 def read_css(files):
     parts = []
     for rel in files:
         with open(os.path.join(ROOT, rel), "r", encoding="utf-8") as f:
-            parts.append(f"/* ===== {rel} ===== */\n" + f.read().strip())
-    return "\n\n".join(parts)
+            # o BOM de alguns arquivos viraria lixo no meio do CSS concatenado
+            parts.append(f.read().lstrip("﻿").strip())
+    return minify_css("\n\n".join(parts))
 
 
 def make_font_async(html):
@@ -127,6 +157,9 @@ def main():
         if r:
             changed += 1
     print(f"OK: {len(targets)} páginas processadas, {changed} atualizadas.")
+    if not _MINIFY_OK:
+        print("AVISO: esbuild indisponível — CSS inlinado sem minificar.")
+        print("       Rode: npm install")
 
 
 if __name__ == "__main__":

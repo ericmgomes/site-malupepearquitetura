@@ -47,8 +47,13 @@ articles.forEach(function (filename, i) {
   const prevFile = articles[i + 1]; // older
   const nextFile = articles[i - 1]; // newer
 
-  const prevHref = prevFile ? `/blog/${prevFile}` : null;
-  const nextHref = nextFile ? `/blog/${nextFile}` : null;
+  // O nome do arquivo tem .html (é usado para achar o arquivo em disco), mas a
+  // URL canônica é sem extensão. Linkar com .html faz o crawler indexar as duas
+  // formas e reportar título/H1 duplicados.
+  const toUrl = (file) => `/blog/${file.replace(/\.html$/, '')}`;
+
+  const prevHref = prevFile ? toUrl(prevFile) : null;
+  const nextHref = nextFile ? toUrl(nextFile) : null;
 
   const prevEl = prevHref
     ? `<a href="${prevHref}" class="ba-article-nav ba-article-nav--prev" title="Artigo anterior">\n  <span class="ba-article-nav__btn">←</span>\n</a>`

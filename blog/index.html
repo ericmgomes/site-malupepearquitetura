@@ -6,6 +6,7 @@
   <script>(function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
   <title>Blog — Malu Pepe Arquitetura</title>
   <meta name="description" content="Referências, ideias e reflexões sobre arquitetura e design de interiores por Malu Pepe.">
+  <link rel="canonical" href="https://malupepearquitetura.com.br/blog/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap"></noscript>
@@ -1248,7 +1249,9 @@ section[id] { scroll-margin-top: var(--nav-height); }
         byYear[year].forEach(function (post) {
           var a = document.createElement('a');
           a.className = 'tl-post';
-          a.href = '/blog/' + post.href;
+          // posts-list guarda o nome do arquivo (.html), mas a URL canonica
+          // e sem extensao — linkar com .html gera conteudo duplicado.
+          a.href = '/blog/' + post.href.replace(/\.html$/, '');
           a.innerHTML =
             '<span class="tl-post__date">' + post.mon + '</span>' +
             '<span class="tl-post__title">' + post.title + '</span>' +

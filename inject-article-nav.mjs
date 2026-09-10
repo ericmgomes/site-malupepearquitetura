@@ -11,17 +11,24 @@ const blogDir = join(__dir, 'blog');
 /* ── 1. Parse article list from blog/index.html ── */
 const indexHtml = readFileSync(join(blogDir, 'index.html'), 'utf8');
 
-// Extract all href values from #posts-list (newest → oldest order in file)
-const hrefRe = /<a href="([^"]+\.html)">/g;
+// Extract all slugs from #posts-list (newest → oldest order in file).
+//
+// A lista guarda o slug SEM .html, que e a URL canonica do artigo. O nome do
+// arquivo em disco e o slug + ".html" — a extensao so entra na hora de abrir
+// o arquivo, nunca num link. Se a lista voltasse a ter .html, o crawler leria
+// esses 65 links no HTML e visitaria as duas formas de cada artigo antes de o
+// canonical descartar uma.
 const postsListMatch = indexHtml.match(/<ul id="posts-list"[\s\S]*?<\/ul>/);
 if (!postsListMatch) { console.error('posts-list not found'); process.exit(1); }
 
 const articles = [];
 let m;
-const re2 = /<a href="([^"]+\.html)">/g;
+const re2 = /<a href="([^"#?]+)">/g;
 while ((m = re2.exec(postsListMatch[0])) !== null) {
-  articles.push(m[1]); // e.g. "como-otimizar-espacos...html"
+  articles.push(m[1].replace(/\.html$/, '')); // e.g. "como-otimizar-espacos..."
 }
+
+const toFile = (slug) => `${slug}.html`;
 
 console.log(`Found ${articles.length} articles`);
 
@@ -32,10 +39,10 @@ console.log(`Found ${articles.length} articles`);
 
 const NAV_MARKER = '<!-- ba-article-nav -->';
 
-articles.forEach(function (filename, i) {
-  const filepath = join(blogDir, filename);
+articles.forEach(function (slug, i) {
+  const filepath = join(blogDir, toFile(slug));
   if (!existsSync(filepath)) {
-    console.warn(`  SKIP (not found): ${filename}`);
+    console.warn(`  SKIP (not found): ${toFile(slug)}`);
     return;
   }
 
@@ -45,16 +52,11 @@ articles.forEach(function (filename, i) {
   // Remove previously injected nav (idempotent)
   html = html.replace(/<!-- ba-article-nav -->[\s\S]*?<!-- \/ba-article-nav -->\n?/g, '');
 
-  const prevFile = articles[i + 1]; // older
-  const nextFile = articles[i - 1]; // newer
+  const prevSlug = articles[i + 1]; // older
+  const nextSlug = articles[i - 1]; // newer
 
-  // O nome do arquivo tem .html (é usado para achar o arquivo em disco), mas a
-  // URL canônica é sem extensão. Linkar com .html faz o crawler indexar as duas
-  // formas e reportar título/H1 duplicados.
-  const toUrl = (file) => `/blog/${file.replace(/\.html$/, '')}`;
-
-  const prevHref = prevFile ? toUrl(prevFile) : null;
-  const nextHref = nextFile ? toUrl(nextFile) : null;
+  const prevHref = prevSlug ? `/blog/${prevSlug}` : null;
+  const nextHref = nextSlug ? `/blog/${nextSlug}` : null;
 
   const prevEl = prevHref
     ? `<a href="${prevHref}" class="ba-article-nav ba-article-nav--prev" title="Artigo anterior">\n  <span class="ba-article-nav__btn">←</span>\n</a>`
@@ -68,7 +70,7 @@ articles.forEach(function (filename, i) {
   html = html.replace('</body>', `${navBlock}</body>`);
 
   writeFileSync(filepath, html, 'utf8');
-  console.log(`  OK [${i + 1}/${articles.length}] ${filename}`);
+  console.log(`  OK [${i + 1}/${articles.length}] ${slug}`);
 });
 
 console.log('\nDone.');
